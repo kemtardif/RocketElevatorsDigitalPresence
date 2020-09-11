@@ -63,46 +63,46 @@ $("#selecthyb").change( function() {
     var choiceCom = $("#selectcom").val();
     var total = $("#deployed").val();
 
-    $("#deploycom").val(total);
+    $("#deploycom").html(total.toString());
 
     if (choiceCom == "1") {
 
-        $("#unitcom").val("7,565.00");
+        $("#unitcom").html("7,565.00");
 
         x3 = 0.1*7565*total;
         x3 = x3.formatMoney(2, '.', ',');
-        $("#feescom").val(x3);
+        $("#feescom").html(x3);
 
     
         total= (1+0.1)*7565*total;
         y3 = total.formatMoney(2, '.', ',');
-        $("#totalcom").val(y3);
+        $("#totalcom").html(y3);
 
     } else if (choiceCom == "2") {
 
-        $("#unitcom").val("12,345.00");
+        $("#unitcom").html("12,345.00");
         
         x3 = 0.13*12345*total;
         x3 = x3.formatMoney(2, '.', ',');
-        $("#feescom").val(x3);
+        $("#feescom").html(x3);
 
     
         total= (1+0.13)*12345*total;
         y3 = total.formatMoney(2, '.', ',');
-        $("#totalcom").val(y3);
+        $("#totalcom").html(y3);
 
     } else if (choiceCom == "3") {
 
-        $("#unitcom").val("15,400.00");
+        $("#unitcom").html("15,400.00");
         
         x3 = 0.16*15400*total;
         x3 = x3.formatMoney(2, '.', ',');
-        $("#feescom").val(x3);
+        $("#feescom").html(x3);
 
     
         total= (1+0.16)*15400*total;
         y3 = total.formatMoney(2, '.', ',');
-        $("#totalcom").val(y3);
+        $("#totalcom").html(y3);
     }
  }
 
@@ -136,50 +136,50 @@ function calculateCorp() {
 
     totalEls = elevatorPerColumn*columnsRequired;
 
-    $("#deploycorp").val(totalEls);
+    $("#deploycorp").html(totalEls);
 
    
 
     if (selectCorp == "1") {
 
-        $("#unitcorp").val("7,565.00");
+        $("#unitcorp").html("7,565.00");
 
         x2 = 0.1*7565*totalEls;
         x2 = x2.formatMoney(2, '.', ',');
-        $("#feescorp").val(x2);
+        $("#feescorp").html(x2);
 
     
         totalCorp= (1+0.1)*7565*totalEls;
         y2 = totalCorp.formatMoney(2, '.', ',');
-        $("#totalcorp").val(y2);
+        $("#totalcorp").html(y2);
         
     } else if (selectCorp == "2") {
 
-        $("#unitcorp").val("12,345.00");
+        $("#unitcorp").html("12,345.00");
         
         x2 = 0.13*12345*totalEls;
         x2 = x2.formatMoney(2, '.', ',');
-        $("#feescorp").val(x2);
+        $("#feescorp").html(x2);
 
     
         totalCorp= (1+0.13)*12345*totalEls;
         y2 = totalCorp.formatMoney(2, '.', ',');
-        $("#totalcorp").val(y2);
+        $("#totalcorp").html(y2);
 
        
 
     } else if (selectCorp == "3") {
 
-        $("#unitcorp").val("15,400.00");
+        $("#unitcorp").html("15,400.00");
         
         x2 = 0.16*15400*totalEls;
         x2 = x2.formatMoney(2, '.', ',');
-        $("#feescorp").val(x2);
+        $("#feescorp").html(x2);
 
     
         totalCorp= (1+0.16)*15400*totalEls;
         y2 = totalCorp.formatMoney(2, '.', ',');
-        $("#totalcorp").val(y2);
+        $("#totalcorp").html(y2);
        
     }
  }
@@ -212,49 +212,53 @@ function calculateRes() {
     columns = 1 + Math.floor(st/20);
 
      cages = reqShafts*columns;
+
+     if(isNaN(cages)) {
+         cages =0;
+     } 
      
      
     
     var choiceRes = $("#selectRes").val();
 
-    $("#deployres").val(cages);
+    $("#deployres").html(cages.toString());
 
 
     if (choiceRes == "1") {
 
-        $("#unitres").val("7,565.00");
+        $("#unitres").html("7,565.00");
 
         x1 = 0.1*7565*cages;
         x1 = x1.formatMoney(2, '.', ',');
-        $("#feesres").val(x1);
+        $("#feesres").html(x1);
 
         totalRes= (1+0.1)*7565*cages; 
         y1 = totalRes.formatMoney(2, '.', ',');
-        $("#totalres").val(y1);
+        $("#totalres").html(y1.toString());
 
     } else if (choiceRes == "2") {
 
-        $("#unitres").val("12,345.00");
+        $("#unitres").html("12,345.00");
 
         x1 = 0.13*12345*cages;
         x1 = x1.formatMoney(2, '.', ',');
-        $("#feesres").val(x1);
+        $("#feesres").html(x1);
 
         totalRes= (1+0.13)*12345*cages; 
         y1 = totalRes.formatMoney(2, '.', ',');
-        $("#totalres").val(y1);
+        $("#totalres").html(y1);
 
     } else if (choiceRes == "3") {
 
-        $("#unitres").val("15,400.00");
+        $("#unitres").html("15,400.00");
 
         x1 = 0.16*15400*cages;
         x1 = x1.formatMoney(2, '.', ',');
-        $("#feesres").val(x1);
+        $("#feesres").html(x1);
 
         totalRes= (1+0.16)*15400*cages; 
         y1 = totalRes.formatMoney(2, '.', ',');
-        $("#totalres").val(y1);
+        $("#totalres").html(y1);
 
     }
 
@@ -271,6 +275,7 @@ function calculateHyb() {
     var tenantsHyb = $("#tenantshyb").val();
     var basementsHyb = $("#bashyb").val();
     var floorsHyb = $("#floorhyb").val();
+    
 
     f1 = Number(floorsHyb);
     b1 = Number(basementsHyb);
@@ -286,48 +291,48 @@ function calculateHyb() {
     elevatorPerColumn1 = Math.ceil(elevatorsRequired1/columnsRequired1);
 
     totalEls1 = elevatorPerColumn1*columnsRequired1;
-         
-    $("#deployhyb").val(totalEls1);
+        
+    $("#deployhyb").html(totalEls1);
 
     if (selectHyb == "1") {
         
-        $("#unithyb").val("7,345.00");
+        $("#unithyb").html("7,345.00");
 
         y = 0.1*7565*totalEls1;
         y = y.formatMoney(2, '.', ',');
-        $("#feeshyb").val(y);
+        $("#feeshyb").html(y);
 
         totalHyb= (1+0.1)*7565*totalEls1;
         x = totalHyb.formatMoney(2, '.', ',')
-        $("#totalhyb").val(x);
+        $("#totalhyb").html(x);
 
 
     } else if (selectHyb == "2") {
 
-        $("#unithyb").val("12,345.00");
+        $("#unithyb").html("12,345.00");
 
         y = 0.13*12345*totalEls1;
         y = y.formatMoney(2, '.', ',');
-        $("#feeshyb").val(y);
+        $("#feeshyb").html(y);
        
 
         totalHyb = (1+0.13)*12345*totalEls1;
         x = totalHyb.formatMoney(2, '.', ',');
-        $("#totalhyb").val(x);
+        $("#totalhyb").html(x);
 
        
 
     } else if (selectHyb == "3") {
 
-        $("#unithyb").val("15,400.00");
+        $("#unithyb").html("15,400.00");
 
        y = 0.16*15400*totalEls1;
         y = y.formatMoney(2, '.', ',');
-        $("#feeshyb").val(y);
+        $("#feeshyb").html(y);
 
         totalHyb= (1+0.16)*15400*totalEls1;
         x = totalHyb.formatMoney(2, '.', ',');
-        $("#totalhyb").val(x);
+        $("#totalhyb").html(x);
 
        
     }

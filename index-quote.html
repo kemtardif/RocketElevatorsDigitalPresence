@@ -185,18 +185,23 @@
 									</li>
 									<li><!-- SERVICES -->
 										<a href="#quote">
-											Quote
+											QUOTE
 										</a>
 									</li>
 									<li><!-- CONTACT US -->
 										<a href="index.html#contact">
-											Contact
+											CONTACT
 										</a>
 									</li>
-									<li><!-- Main Page -->
-										<a href="index.html">
-											MAIN
+									<li class="dropdown"><!-- ABOUT -->
+										<a class="dropdown-toggle" href="#">
+											SERVICES
 										</a>
+										<ul class="dropdown-menu">
+											<li><a href="index-res.html">Residential</a></li>
+											<li><a href="index-corp.html">Corporate/Commercial</a></li>
+											<li><a href="index.html">Main Page</a></li>
+										</ul>
 									</li>
 									
 								</ul>
@@ -289,7 +294,7 @@
 
 									
 								</div>
-
+									
 								<div class="col-sm-6 m-0">
 									<label class="fs-12">Number of parking spaces available</label>
 									<input type="number" class="form-control" min="0" >
@@ -312,17 +317,28 @@
 
 						<div class="col-md-6 mb-30" id="costcom">
 							
-							<label class="fs-14">Number of elevator cages needed</label>
-							<input class="form-control" id="deploycom" type="number"  disabled>
+							<table class="table fs-14 m-0">
+								<tbody>
+									<tr>
+										<td class="b-0 p-3">Number of elevator cages needed</td>
+										<td class="b-0 p-3 text-right text-black fw-800"><span id="deploycom">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Unit price for elevator of selected line</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="unitcom">3,792.44</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Installation fees</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="feescom">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Total estimated cost</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="totalcom">0</span></td>
+									</tr>
+								
+								</tbody>
+							</table>
 
-							<label class="fs-14">Unit price for elevator of selected line ($) </label>
-							<input class="form-control" id="unitcom" type="text"  disabled>
-
-							<label class="fs-14"> Installation fees ($) </label>
-							<input class="form-control" id="feescom" type="text"  disabled>
-
-							<label class="fs-14">Total estimated cost ($) </label>
-							<input class="form-control" id="totalcom" type="text"  disabled>
 
 						</div>
 
@@ -338,14 +354,17 @@
 							<div class="row">
 
 								<div class="col-sm-6 m-0">
+							
 									<label class="fs-12">Number of appartments in the building</label>
-									<input  type="number" class="form-control stepper" id = "apptsres" min = "1" >
+									<input  type="number" class="form-control stepper"  id = "apptsres" min = "1" >
 
 									<label class="fs-12">Number of floors contained in the building</label>
 									<input  type="number" class="form-control stepper"  id = "floorsres" min = "1" >
 
 									<label class="fs-12">Number of basements contained in the building</label>
-									<input  type="number" class="form-control stepper" min = "0" id = "basementsres">
+									<input  type="number" class="form-control stepper"  min = "0" id = "basementsres">
+
+								
 
 									
 								</div>
@@ -367,17 +386,27 @@
 						</div>
 
 						<div class="col-md-6 mb-30" id="costres">
-							<label class="fs-14">Number of elevator cages needed</label>
-							<input class="form-control" id="deployres" type="number"  disabled>
-
-							<label class="fs-14">Unit price for elevator of selected line ($)</label>
-							<input class="form-control" id="unitres" type="text"  disabled>
-
-							<label class="fs-14">Additional fees ($)</label>
-							<input class="form-control" id="feesres" type="text"  disabled>
-
-							<label class="fs-14">Total estimated cost ($)</label>
-							<input class="form-control" id="totalres" type="text"  disabled>
+							<table class="table fs-14 m-0">
+								<tbody>
+									<tr>
+										<td class="b-0 p-3">Number of elevator cages needed</td>
+										<td class="b-0 p-3 text-right text-black fw-800"><span id="deployres">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Unit price for elevator of selected line</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="unitres">3,792.44</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Installation fees</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="feesres">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Total estimated cost</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="totalres">0</span></td>
+									</tr>
+								
+								</tbody>
+							</table>
 
 						</div>
 				</div>
@@ -425,18 +454,27 @@
 						</div>
 
 						<div class="col-md-6 mb-30" id="costcorp">
-							<label class="fs-14">Number of elevators needed</label>
-							<input class="form-control" id="deploycorp" type="number"  disabled>
-
-							<label class="fs-14">Unit price of elevator for selection line ($)</label>
-							<input class="form-control" id="unitcorp" type="text"  disabled>
-
-							<label class="fs-14">Additional fees ($)</label>
-							<input class="form-control" id="feescorp" type="text"  disabled>
-
-							<label class="fs-14">Total estimated cost ($)</label>
-							<input class="form-control" id="totalcorp" type="text"  disabled>
-
+							<table class="table fs-14 m-0">
+								<tbody>
+									<tr>
+										<td class="b-0 p-3">Number of elevator cages needed</td>
+										<td class="b-0 p-3 text-right text-black fw-800"><span id="deploycorp">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Unit price for elevator of selected line</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="unitcorp">3,792.44</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Installation fees</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="feescorp">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Total estimated cost</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="totalcorp">0</span></td>
+									</tr>
+								
+								</tbody>
+							</table>
 						</div>
 
 					</div>
@@ -471,7 +509,33 @@
 
 								<div class="col-sm-6 m-0">
 									<label class="fs-12">Hours of activity of the building </label>
-									<input type="number"  min="0" max="24" id = "hours" class="form-control stepper">
+									<select class="form-control" name="list-order-option">
+										<option value="0">0</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+									</select>
 
 									<label class="fs-12">Number of distinct businesses</label>
 									<input  type="number" class="form-control stepper" min="0" >
@@ -490,17 +554,27 @@
 						</div>
 
 						<div class="col-md-6 mb-30" id="costhyb">
-							<label class="fs-14">Number of elevators needed</label>
-							<input class="form-control " id="deployhyb" type="number"   disabled>
-
-							<label class="fs-14">Unit price of elevator for selection line ($)</label>
-							<input class="form-control" id="unithyb" type="text"  disabled>
-
-							<label class="fs-14">Additional fees ($)</label>
-							<input class="form-control" id="feeshyb" type="text"  disabled>
-
-							<label class="fs-14">Total estimated cost ($)</label>
-							<input class="form-control" id="totalhyb" type="text"  disabled>
+							<table class="table fs-14 m-0">
+								<tbody>
+									<tr>
+										<td class="b-0 p-3">Number of elevator cages needed</td>
+										<td class="b-0 p-3 text-right text-black fw-800"><span id="deployhyb">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Unit price for elevator of selected line</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="unithyb">3,792.44</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Installation fees</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="feeshyb">0</span></td>
+									</tr>
+									<tr>
+										<td class="b-0 p-3">Total estimated cost</td>
+										<td class="b-0 p-3 text-right text-black fw-800">$<span id="totalhyb">0</span></td>
+									</tr>
+								
+								</tbody>
+							</table>
 
 						</div>
 
