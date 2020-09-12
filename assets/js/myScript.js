@@ -213,8 +213,9 @@ function calculateRes() {
 
      cages = reqShafts*columns;
 
-     if(isNaN(cages)) {
-         cages =0;
+     //AVOID INCONSISTENCIES IN RESULTS //////////
+     if(isNaN(cages) ||floorsRes ==0) {
+         cages ="";
      } 
      
      
