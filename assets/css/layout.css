@@ -559,9 +559,11 @@ body.boxed #wrapper {
 	body.grain-blue div.heading-title h4, 
 	body.grain-blue div.heading-title h5, 
 	body.grain-blue div.heading-title h6 {
-		background:#dce4e9  url('/assets/images/') repeat;
+		background:#dce4e9  url('color_scheme/grain_bg.png') repeat;
 	}
+	/* 
 	
+	 
 	
 
 	/* essentials.css rewrite : heading shortcode */
@@ -951,7 +953,8 @@ section.page-header {
 }
 
 
-
+	/* shadows */
+	
 
 	section.dark.page-header {
 		color:#fff;
@@ -1344,7 +1347,8 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 
 
 
-
+	/* shadows */
+	
 
 
 	/** Search - Default
@@ -1999,7 +2003,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		border-bottom-color:rgba(255,255,255,0.1);
 	}
 	body.menu-vertical #mainMenu.sidebar-vertical.sidebar-dark .navbar-default .navbar-nav>li>a.dropdown-toggle {
-		background-image: url('assets/images/submenu_dark.png');
+		background-image: url('color_scheme/dark.jpg');
 	}
 	body.menu-vertical #mainMenu.sidebar-vertical.sidebar-dark .sidebar-nav .navbar li a {
 		color:#ccc;
@@ -3492,8 +3496,8 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 	}
 
 
+	/* LIGHT SUBMENU */
 	
-
 
 	/* DARK SUBMENU */
 	#topNav div.submenu-dark ul.dropdown-menu {
@@ -3501,7 +3505,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		background-color:#333;
 	}
 	#topNav div.submenu-dark ul.dropdown-menu a.dropdown-toggle {
-		background-image: url('assets/images/submenu_dark.png');
+		background-image: url('color_scheme/submenu_dark.png');
 	}
 	#topNav div.submenu-dark ul.dropdown-menu li.active>a, 
 	#topNav div.submenu-dark ul.dropdown-menu li.active:hover>a, 
@@ -8158,6 +8162,7 @@ section.dark.alternate .timeline .timeline-entry {
 				border-radius: 100%; 
 	}
 	
+	
 	.timeline_center li h3 { 
 		font-size: 30px; 
 		line-height: 35px; 
@@ -8222,6 +8227,7 @@ section.dark.alternate .timeline .timeline-entry {
 
 	@media only screen and (max-width: 650px) {
 		.timeline_center { background-position: 11px top; }
+		
 		.timeline_center li h3 span { position:relative; display:block; right:auto; left:auto; padding:5px 0 !important; margin:0; }
 		.timeline_center li:nth-child(even) h3 span { position:relative; display:block; right:auto; left:auto; padding:0; margin:0; }
 		.timeline_center li h3 { font-size:24px; line-height:24px; }
